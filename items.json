@@ -1,0 +1,38 @@
+{
+    "item.paladium.sword.name": "item.blood_sword.name",
+    "item.paladium.helmet.name": "item.helmetBlood.name",
+    "item.paladium.chestplate.name": "item.chestplateBlood.name",
+    "item.paladium.leggings.name": "item.leggingsBlood.name",
+    "item.paladium.boots.name": "item.bootsBlood.name",
+
+    "item.titane.sword.name": "item.titanic_sword.name",
+    "item.titane.helmet.name": "item.helmetTitanic.name",
+    "item.titane.chestplate.name": "item.chestplateTitanic.name",
+    "item.titane.leggings.name": "item.leggingsTitanic.name",
+    "item.titane.boots.name": "item.bootsTitanic.name",
+
+    "item.amethyst.sword.name": "item.magic_sword.name",
+    "item.amethyst.helmet.name": "item.helmetMagic.name",
+    "item.amethyst.chestplate.name": "item.chestplateMagic.name",
+    "item.amethyst.leggings.name": "item.leggingsMagic.name",
+    "item.amethyst.boots.name": "item.bootsMagic.name",
+
+    "item.endium.sword.name": "item.nocturne_sword.name",
+    "item.endium.helmet.name": "item.helmetNocturne.name",
+    "item.endium.chestplate.name": "item.leggingsNocturne.name",
+    "item.endium.leggings.name": "item.chestplateNocturne.name",
+    "item.endium.boots.name": "item.bootsNocturne.name",
+
+    "item.hyperjumpstick.name": "item.megaJumpStick.name",
+    "item.healstick.name": "item.healstick.name",
+    "item.strenghtstick.name": "item.strengthstick.name",
+    "item.stickofgod.name": "item.royalstick.name",
+    "item.speedstick.name": "item.speedstick.name",
+
+    "item.hangglider.name": "item.hangGlider.name",
+    "item.paladium.apple.name=Palapple": "item.bloodApple.name",
+    "item.potion_launcher.name": "item.potionLauncher.name",
+    "item.infernalknocker.name": "item.anti_covid.name",
+    "item.paladiumbow.name": "item.magic_bow.name",
+    "tile.slimepad_green.name": "tile.slimPad.name"
+}

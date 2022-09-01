@@ -1,0 +1,50 @@
+{
+    "palamod/textures/items/paladium_sword": "minecraft/textures/items/blood_sword",
+    "palamod/textures/items/paladium_helmet": "minecraft/textures/items/blood_helmet",
+    "palamod/textures/items/paladium_chestplate": "minecraft/textures/items/blood_chestplate",
+    "palamod/textures/items/paladium_leggings": "minecraft/textures/items/blood_leggings",
+    "palamod/textures/items/paladium_boots": "minecraft/textures/items/blood_boots",
+    "palamod/textures/models/paladium_armor_1": "minecraft/textures/models/armor/blood_layer_1",
+    "palamod/textures/models/paladium_armor_2": "minecraft/textures/models/armor/blood_layer_2",
+
+    "palamod/textures/items/titane_sword": "minecraft/textures/items/titanic_sword",
+    "palamod/textures/items/titane_helmet": "minecraft/textures/items/titanic_helmet",
+    "palamod/textures/items/titane_chestplate": "minecraft/textures/items/titanic_chestplate",
+    "palamod/textures/items/titane_leggings": "minecraft/textures/items/titanic_leggings",
+    "palamod/textures/items/titane_boots": "minecraft/textures/items/titanic_boots",
+    "palamod/textures/models/titane_armor_1": "",
+    "palamod/textures/models/titane_armor_2": "",
+
+    "palamod/textures/items/amethyst_sword": "minecraft/textures/items/magic_sword",
+    "palamod/textures/items/amethyst_helmet": "minecraft/textures/items/magic_helmet",
+    "palamod/textures/items/amethyst_chestplate": "minecraft/textures/items/magic_chestplate",
+    "palamod/textures/items/amethyst_leggings": "minecraft/textures/items/magic_leggings",
+    "palamod/textures/items/amethyst_boots": "minecraft/textures/items/magic_boots",
+    "palamod/textures/models/amethyst_armor_1": "",
+    "palamod/textures/models/amethyst_armor_2": "",
+
+    "palamod/textures/items/endium_sword": "minecraft/textures/items/nocturne_sword",
+    "palamod/textures/items/endium_helmet": "minecraft/textures/items/nocturne_helmet",
+    "palamod/textures/items/endium_chestplate": "minecraft/textures/items/nocturne_chestplate",
+    "palamod/textures/items/endium_leggings": "minecraft/textures/items/nocturne_leggings",
+    "palamod/textures/items/endium_boots": "minecraft/textures/items/nocturne_boots",
+    "palamod/textures/models/endium_armor_1": "",
+    "palamod/textures/models/endium_armor_2": "",
+
+    "palamod/textures/items/HyperJumpStick": "minecraft/textures/items/mega_jump_stick",
+    "palamod/textures/items/HealStick": "minecraft/textures/items/heal_stick",
+    "palamod/textures/items/StrenghtStick": "minecraft/textures/items/strenght_stick",
+    "palamod/textures/items/StickOfGod": "minecraft/textures/items/royal_stick",
+    "palamod/textures/items/SpeedStick": "minecraft/textures/items/speed_stick",
+
+    "palamod/textures/items/hangglider": "minecraft/textures/items/hang_glider",
+    "palamod/textures/items/paladium_apple": "minecraft/textures/items/blood_apple",
+    "palamod/textures/items/weapons/potion_launcher": "minecraft/textures/items/potion_launcher",
+    "palamod/textures/items/InfernalKnocker": "minecraft/textures/items/anti_covid",
+    "palamod/textures/items/weapons/paladium_bow": "minecraft/textures/items/magic_bow_standby",
+    "palamod/textures/items/weapons/paladium_bow_0": "minecraft/textures/items/magic_bow_pulling_0",
+    "palamod/textures/items/weapons/paladium_bow_1": "minecraft/textures/items/magic_bow_pulling_1",
+    "palamod/textures/items/weapons/paladium_bow_2": "minecraft/textures/items/magic_bow_pulling_2",
+    "palamod/textures/blocks/slime_green": "minecraft/textures/blocks/slim_pad"
+
+}
