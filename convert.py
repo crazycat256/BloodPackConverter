@@ -10,12 +10,12 @@ def convert(path: str, to: Literal["pala", "blood"]):
     :param invert: Whether to invert the colors.
     """
 
-    with open(resource_path("assets.json"), "r") as f:
+    with open(resource_path("src/assets.json"), "r") as f:
         assets: dict = json.load(f)
         if to == "pala":
             assets = invert_dict(assets)
 
-    with open(resource_path("items.json"), "r") as f:
+    with open(resource_path("src/items.json"), "r") as f:
         items: dict = json.load(f)
         if to == "pala":
             items = invert_dict(items)

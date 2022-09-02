@@ -3,9 +3,9 @@ from convert import convert
 from functions import *
 from tkinter import *
 from typing_extensions import Literal
-from tkinter.filedialog import askdirectory, askopenfilename
+from tkinter.filedialog import askopenfilename
 from tkinter.font import Font
-import webbrowser, zipfile, shutil
+import webbrowser, shutil, tempfile
 
 status_dic = {
     "blood": "Paladium vers Bloodshed",
@@ -40,31 +40,39 @@ def run(path: str, status: Literal["pala", "blood"]):
         error_label.pack()
         return
 
-    new_path = path.removesuffix(".zip") + "-" + status
+    new_path = path.removesuffix(".zip") + "-converted"
 
-    try:
-        shutil.unpack_archive(path, new_path)
-    except:
-        error_label.config(text="Erreur lors de l'extraction de l'archive zip")
+    if os.path.isfile(new_path):
+        error_label.config(text="Il y a déjà un pack à la destination de sortie")
         error_label.pack()
         return
+
+    with tempfile.TemporaryDirectory() as tempdir:
+
+        temp_path = os.path.join(tempdir, "temp-pack")
+
+        try:
+            shutil.unpack_archive(path, temp_path)
+        except:
+            error_label.config(text="Erreur lors de l'extraction de l'archive zip")
+            error_label.pack()
+            return
+        
+
+        try:
+            convert(temp_path, status)
+
+            shutil.make_archive(new_path, 'zip', temp_path)
+            shutil.rmtree(temp_path)
+
+            success_label.config(text="Pack converti\n" + os.path.abspath(new_path))
+            success_label.pack()
+        except:
+            traceback.print_exc()
+            error_label.config(text="Une erreur inattendue est survenue")
+            error_label.pack()
+
     
-
-    try:
-        convert(new_path, status)
-
-        shutil.make_archive(new_path, 'zip', new_path)
-        shutil.rmtree(new_path)
-
-        success_label.config(text="Pack converti\n" + os.path.abspath(new_path))
-        success_label.pack()
-    except:
-        traceback.print_exc()
-        error_label.pack()
-
-    
-
-
 
 
 
@@ -72,8 +80,9 @@ def run(path: str, status: Literal["pala", "blood"]):
 root = Tk()
 root.title("BloodPackConverter")
 root.geometry("500x300")
-root.resizable(False, False)
-root.iconbitmap(resource_path("assets/icon.ico")) # https://www.flaticon.com/fr/icones-gratuites/convertir
+root.wm_maxsize(1000, 600)
+root.wm_minsize(500, 300)
+root.iconbitmap(resource_path("src/icon.ico")) # https://www.flaticon.com/fr/icones-gratuites/convertir
 
 title = Label(root, text="BloodPackConverter", font=("Arial", 20))
 title.pack()
@@ -88,7 +97,7 @@ frame = Frame(root)
 path_entry = Entry(frame, width=50)
 path_entry.pack(side=LEFT)
 
-browse_button = Button(frame, text="Browse", command=select_file)
+browse_button = Button(frame, text="Rechercher", command=select_file)
 browse_button.pack(side=LEFT)
 
 frame.pack(pady=20)
