@@ -90,6 +90,8 @@ def convert(path: str, to: Literal["pala", "blood"]):
             new_asset_file = os.path.join(path, "assets", new_asset + ext)
 
             if os.path.isfile(asset_file):
+                if os.path.isfile(new_asset_file):
+                    os.remove(new_asset_file)
                 shutil.copyfile(asset_file, new_asset_file)
 
 
