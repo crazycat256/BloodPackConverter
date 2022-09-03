@@ -108,28 +108,32 @@ root.wm_maxsize(1000, 600)
 root.wm_minsize(500, 300)
 root.iconbitmap(resource_path("src/icon.ico")) # https://www.flaticon.com/fr/icones-gratuites/convertir
 
-title = Label(root, text="BloodPackConverter", font=("Arial", 20))
+title_frame = Frame(root)
+
+title = Label(title_frame, text="BloodPackConverter", font=("Arial", 20))
 title.pack()
 
-subtitle = Label(root, text="By crazycat256", font=("Helveticabold", 10), fg="blue", cursor="hand2")
+subtitle = Label(title_frame, text="By crazycat256", font=("Helveticabold", 10), fg="blue", cursor="hand2")
 subtitle.bind("<Button-1>", lambda e: open_url("https://github.com/crazycat256/BloodPackConverter"))
 subtitle.pack()
 
+title_frame.pack(pady=10)
+
+
+
+
+path_entry = Entry(root, width=60)
+path_entry.pack()
 
 path_frame = Frame(root)
 
-path_entry = Entry(path_frame, width=60)
-path_entry.pack(side=LEFT)
 
-zip_file_image = PhotoImage(file=resource_path("src/zip.png")).subsample(32) # https://www.flaticon.com/free-icons/zip
-folder_image = PhotoImage(file=resource_path("src/folder.png")).subsample(32) # https://www.flaticon.com/free-icons/zip
-
-browse_zip_button = Button(path_frame, image=zip_file_image,command=select_file)
+browse_zip_button = Button(path_frame, text="Sélectionner un .zip",command=select_file)
 browse_zip_button.pack(side=LEFT)
-browse_folder_button = Button(path_frame, image=folder_image, command=select_folder)
+browse_folder_button = Button(path_frame, text="Sélectionner un dossier", command=select_folder)
 browse_folder_button.pack(side=LEFT)
 
-path_frame.pack(pady=20)
+path_frame.pack()
 
 
 mode_frame = Frame(root)
@@ -140,13 +144,13 @@ mode_label.pack(side=LEFT)
 mode_button = ToggleButton()
 mode_button.pack(side=LEFT)
 
-mode_frame.pack()
+mode_frame.pack(pady=30)
 
 
 convert_button_font = Font(family="Helveticabold", size=12)
 
 convert_button = Button(root, text="Convertir", command=lambda: run(path_entry.get(), mode_button.status), width=20, height=2, font=convert_button_font)
-convert_button.pack(pady=30)
+convert_button.pack()
 
 success_label = Label(root, font=("Helveticabold", 10), fg="green")
 error_label = Label(root, text="Une erreur inattendue est survenue", font=("Helveticabold", 10), fg="red")
